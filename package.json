@@ -1,0 +1,27 @@
+{
+  "name": "quaiantiquerestaurantfront",
+  "version": "1.0.0",
+  "description": "ce site est un site vitrine de restauration Quai Antique\r # Installation",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "sass --load-path=node_modules/bootstrap/scss scss/main.scss scss/main.css",
+    "watch:scss": "sass --watch --load-path=node_modules/bootstrap/scss scss/main.scss:scss/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacob7salih/QuaiAntiqueRestaurantFront.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jacob7salih/QuaiAntiqueRestaurantFront/issues"
+  },
+  "homepage": "https://github.com/Jacob7salih/QuaiAntiqueRestaurantFront#readme",
+  "devDependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.101.0"
+  }
+}
