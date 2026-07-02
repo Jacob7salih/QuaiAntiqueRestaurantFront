@@ -49,9 +49,13 @@ const LoadContentPage = async () => {
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
   event = event || window.event;
+  const anchor = event.target.closest("a");
+  if (!anchor || !anchor.href) {
+    return;
+  }
   event.preventDefault();
   // Mise à jour de l'URL dans l'historique du navigateur
-  window.history.pushState({}, "", event.target.href);
+  window.history.pushState({}, "", anchor.getAttribute("href"));
   // Chargement du contenu de la nouvelle page
   LoadContentPage();
 };
