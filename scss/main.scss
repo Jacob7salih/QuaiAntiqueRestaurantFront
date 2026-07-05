@@ -2,9 +2,9 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-/* Global text color override: make site text white */
+/* Global text color override: keep body text readable on the light background */
 body {
-  color: #ffffff;
+  color: #392C1E;
 }
 
 html {
@@ -64,4 +64,8 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
