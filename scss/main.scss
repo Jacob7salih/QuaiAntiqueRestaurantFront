@@ -72,10 +72,16 @@ p {
 
 .image-card {
   position: relative;
+  overflow: hidden;
 
   &:hover {
     .titre-image {
       opacity: 1;
+    }
+
+    .action-image-buttons {
+      opacity: 1;
+      pointer-events: auto;
     }
 
     img {
@@ -94,9 +100,21 @@ p {
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all 0.3s;
+    z-index: 2;
   }
-}
 
-.form-label {
-  color: primary;
+  .action-image-buttons {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
 }
