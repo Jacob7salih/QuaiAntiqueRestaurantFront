@@ -79,10 +79,6 @@ p {
       opacity: 1;
     }
 
-    .action-image-buttons {
-      opacity: 1;
-      pointer-events: auto;
-    }
 
     img {
       filter: brightness(0.3);
@@ -103,18 +99,4 @@ p {
     z-index: 2;
   }
 
-  .action-image-buttons {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 12px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 3;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
 }

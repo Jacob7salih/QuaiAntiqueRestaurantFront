@@ -24028,10 +24028,6 @@ p {
 .image-card:hover .titre-image {
   opacity: 1;
 }
-.image-card:hover .action-image-buttons {
-  opacity: 1;
-  pointer-events: auto;
-}
 .image-card:hover img {
   filter: brightness(0.3);
 }
@@ -24046,17 +24042,4 @@ p {
   opacity: 0;
   transition: all 0.3s;
   z-index: 2;
-}
-.image-card .action-image-buttons {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 12px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 3;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
 }/*# sourceMappingURL=main.css.map */
