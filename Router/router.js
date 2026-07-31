@@ -53,16 +53,27 @@ const routeEvent = (event) => {
   if (!anchor || !anchor.href) {
     return;
   }
+
+  const href = anchor.getAttribute("href");
+  if (!href || !href.startsWith("/")) {
+    return;
+  }
+
+  const targetRoute = getRouteByUrl(href);
+  if (targetRoute.url === "404") {
+    return;
+  }
+
   event.preventDefault();
-  // Mise à jour de l'URL dans l'historique du navigateur
-  window.history.pushState({}, "", anchor.getAttribute("href"));
-  // Chargement du contenu de la nouvelle page
+  window.history.pushState({}, "", href);
   LoadContentPage();
 };
 
 // Gestion de l'événement de retour en arrière dans l'historique du navigateur
 window.onpopstate = LoadContentPage;
-// Assignation de la fonction routeEvent à la propriété route de la fenêtre
+// Ecoute globale de clics pour les liens internes
+document.addEventListener("click", routeEvent);
+// Assignation de la fonction routeEvent à la propriété route de la fenêtre (facultatif)
 window.route = routeEvent;
 // Chargement du contenu de la page au chargement initial
 LoadContentPage();
